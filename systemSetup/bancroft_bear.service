@@ -1,0 +1,13 @@
+[Unit]
+Description=BancroftLab Bear Trap Runner
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=3
+ExecStart=/bin/bash /home/<user>/bancroft-lab-shia/systemSetup/bear_rabbit_startUp.sh 2>&1 | tee /home/<user>/bancroft-lab-shia/sysStartupLog.txt
+
+[Install]
+WantedBy=multi-user.target
+

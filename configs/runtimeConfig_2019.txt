@@ -1,0 +1,5 @@
+startDate,2019,5,26
+startDay,1
+hData,/home/<user>/bancroft-lab-shia/tempData/historicData_6_26_18.csv
+fData,/home/<user>/bancroft-lab-shia/tempData/futureData_7_19_17.csv
+

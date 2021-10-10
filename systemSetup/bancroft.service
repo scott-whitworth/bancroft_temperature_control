@@ -1,0 +1,13 @@
+[Unit]
+Description=BancroftLab Runner
+After=multi-user.target
+
+[Service]
+Type=forking
+Restart=on-failure
+RestartSec=3
+ExecStart=/usr/bin/screen -dmS startUpBancroft /usr/bin/python /home/<user>/bancroft-lab-shia/shia_surprise.py 
+
+[Install]
+WantedBy=multi-user.target
+
