@@ -9,6 +9,7 @@ This code pairs with a physical system developed for Betsy Bancroft's Ecology La
 | [System Overview](#System-Overview) | Cool files |
 | [System Set Up](#Set-Up-Considerations-and-Documentation) | source |
 | [Naming Convention](#system-naming-information) |  |
+| [Bill of Materials](#bill-of-materials) | |
 | [Future Work](#future-work-notes) | |
 | [Licenses](#license-information-for-3rd-party-software) | |
 
@@ -130,6 +131,40 @@ bear_trap.py | Main control script. Controls RabbitMQ configuration, reading con
 shia_surprise.py | Control Pair supporting script. Connects logically to `bear_trap.py` to send/receive system data, interfaces with Ardiuno code via I2C connection|
 normal_tuesday.py | Diagnostic script to parse / probe data. Primarily used in testing the system and monitoring the system state |
 peanut_butter_falcon.py | Diagnostic control script that can be run on the Main Control Node in place of `bear_trap.py` to collect system performance data |
+
+# Bill of Material
+
+This is to give a budgetary perspective and rough reference for replicating this system. All material listed is to rebuild the system in 2021 dollars.
+
+### System Control Node
+
+| Item | Unit Price | Quantity | Source |
+|------|------------|----------|--------|
+| Raspberry Pi (with power, SD and case) | $90 | 1 | https://www.canakit.com/raspberry-pi-3-starter-kit.html |
+| Unmanaged Network Switch | $80 | 1 | https://www.amazon.com/NETGEAR-Ethernet-Unmanaged-Protection-GS116NA/dp/B00023DRLO |
+| 25ft Cat6 Ethernet Cable | $12 | 1 | https://www.amazon.com/Mediabridge-Ethernet-Cable-Feet-31-399-25X/dp/B001W28L2Y/ |
+| 450W Computer PSU | $26 | 1 | https://www.amazon.com/APEVIA-VENUS450W-Auto-Thermally-Controlled-Protections/dp/B077BQ76TP/ |
+| Total | $208 | | This does not include shipping or tax |
+
+### Single Control Pair Node
+
+This represents the approximate cost for one single control pair (Arduino + Pi) that can manage 9 tanks. In theory this is scalable to large numbers of tanks (100+) or to a smaller scale. This does not include the cost of the aquarium heaters connected to the system.
+
+| Item | Unit Price | Quantity | Source |
+|------|------------|----------|--------|
+| Raspberry Pi (with power, SD and case) | $90 | 1 | https://www.canakit.com/raspberry-pi-3-starter-kit.html |
+| Arduino Nano | $6 | 1 | https://www.amazon.com/ELEGOO-Arduino-ATmega328P-Without-Compatible/dp/B0713XK923/ |
+| DS18B20 Temperature Probe | $10 | 9 | https://www.sparkfun.com/products/11050 |
+| 10K Ohm pull-up Resistor | $0.06 | 9 | https://www.sparkfun.com/products/14491 |
+| Logic Controlled Power Switch | $30 | 9 | https://www.adafruit.com/product/2935 |
+| Breadboard | $1 | 1 | https://www.amazon.com/YUNGUI-Prototype-Soldering-Electronic-Breadboard/dp/B07YFYDW5C/ |
+| Headers | $2 | 1 | https://www.sparkfun.com/products/115 |
+| Wire Terminals | $1 | 26 | https://www.sparkfun.com/products/10571 |
+| Project Case | $12 | 1 | https://www.sparkfun.com/products/16737 | 
+| Hookup Wire | $5 | Assorted | https://www.sparkfun.com/products/11375 |
+| Total | $503 | |
+
+Approximate material for a for a 96 tank setup: $5800
 
 # Future Work Notes
 
