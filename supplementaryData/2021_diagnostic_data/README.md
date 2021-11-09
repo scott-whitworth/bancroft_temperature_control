@@ -7,7 +7,7 @@ Collected summer of 2021 to capture the performance metrics of the system.
 ![ThreeGroup_plot_halfWater](./plots/mega_halfTanks__all.png) 
 
 ## Setup
-Each of these data collections were performed on the same 9.4L tanks over the course of two weeks. The goal was to capture approximate performance of the heating system looking at the heating performance when one, five or all nine tanks were heating, as well as the cooling performance.
+Each of these data collections were performed on the same 9.4L tanks over the course of two weeks. The goal was to capture approximate performance of the heating system looking at the heating performance when one, five or all nine tanks were heating, as well as the cooling performance. Heating refers to a set temp of 40 degrees C, cooling refers to settling down to the room's ambient (14 degrees C).
 
 In place of using the full system infrastructure, only one Raspberry Pi / Arduino pair was used, without the need to interface with the main control node (Shia). This singular control pair utilized the `peanut_butter_falcon.py` script to collect the data.
 
