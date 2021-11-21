@@ -48,3 +48,6 @@ Another important factor in the performance was the duty cycling of the heaters 
 ## R Scripts and Raw Data
 The R scripts used to process these graphs is included as well inside subdirectories.
 
+## Gradient Measurements
+Some of the data collected, and outlined in [pbf_notes.md](./pbf_notes.md), was meant to capture the intra-tank heat metrics of the heater and the control temperature probe. Graphs were not deemed necessary for this detail of data. The two images [gradient_iso_7_2021.jpg](gradient_iso_7_2021.jpg) and [gradient_profile_7_2021.jpg](gradient_profile_7_2021.jpg) give a visual representation of the temperature probe fixture described in the notes file.
+

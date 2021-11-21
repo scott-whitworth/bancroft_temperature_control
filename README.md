@@ -6,8 +6,8 @@ This code pairs with a physical system developed for Betsy Bancroft's Ecology La
 
 | Section | Associated Files |
 |---------|------------------|
-| [System Overview](#System-Overview) | Cool files |
-| [System Set Up](#Set-Up-Considerations-and-Documentation) | source |
+| [System Overview](#System-Overview) | [System Diagrams and Photos](./supplementaryData/System_Photos/README.md) |
+| [System Set Up](#Set-Up-Considerations-and-Documentation) |  [Setup Readme](./systemSetup/README.md) |
 | [Naming Convention](#system-naming-information) |  |
 | [Bill of Materials](#bill-of-materials) | |
 | [Future Work](#future-work-notes) | |
@@ -20,7 +20,7 @@ This code pairs with a physical system developed for Betsy Bancroft's Ecology La
 |`./developmentCode` | Depreciated code based on former system configuration with one massive shared I2C bus from one pi to many Ardunios |
 | `./outputData` | Placeholder for output files from the system |
 | `./pythonCode` | All of the python scripts used on the Raspberry Pis |
-| `./supplementaryData` | Diagnostic or representative data collected regarding the system |
+| `./supplementaryData` | Diagnostic or representative data collected regarding the system. Diagrams and photos of the system. |
 | `./systemSetup` | `.service` files and information on configuring automatic start up of the system |
 | `./tempData`   | Placeholder for temperature treatment data, would hold the future and historic `.csv` files |
  
