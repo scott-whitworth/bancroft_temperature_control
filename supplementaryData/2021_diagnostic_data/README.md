@@ -51,3 +51,19 @@ The R scripts used to process these graphs is included as well inside subdirecto
 ## Gradient Measurements
 Some of the data collected, and outlined in [pbf_notes.md](./pbf_notes.md), was meant to capture the intra-tank heat metrics of the heater and the control temperature probe. Graphs were not deemed necessary for this detail of data. The two images [gradient_iso_7_2021.jpg](gradient_iso_7_2021.jpg) and [gradient_profile_7_2021.jpg](gradient_profile_7_2021.jpg) give a visual representation of the temperature probe fixture described in the notes file.
 
+# Temperature Metrics
+
+From 15% to 85% of total range. This ignores the extremes of the profiles. It should also be noted that the resolution of the temperature probes is about 0.36 degrees.  
+
+| Heating / Cooling | Number of Tanks | Full / Half Water Level | Min/Max/\[Average\] Delta ( $C\degree/hour$ ) | Relevant File |  
+|-------------------|-----------------|-------------------------|-----------------------------------------------|---------------|
+| Heating | One tank   | Half water |   0.72 / 8.28 / **3.40**          | `pbf_2021_7_6_one_tank_heating_half_water` |
+| Heating | One tank   | Full water |   0.36 / 4.14 / **1.78**          | `pbf_2021_7_9_one_tank_cold_to_hot_full_tanks.csv` |
+| Heating | Five tanks | Half water |   1.86 / 8.22 / **4.91**          | `pbf_2021_7_9_one_tank_cold_to_hot_full_tanks.csv` |
+| Heating | Five tanks | Full water |   0.72 / 4.92 / **2.51**          | `pbf_2021_7_12_five_tanks_warming_full_water.csv` |
+| Heating | All tanks  | Half water |   1.5 / 7.08 / **3.21**           | `pbf_2021_6_30_cold_to_hot_all_half.csv` |
+| Heating | All tanks  | Full water |   0.36 / 3.72 / **1.70**          | `pbf_2021_7_14_all_cold_to_hot_full_tank.csv` |
+| Cooling | All tanks  | Half water |   -0.72 / -7.5 / **-2.91**        | `pbf_2021_6_29_hot_to_cold_halfTank.csv` |
+| Cooling | All tanks  | Full water |   -0.36 / -4.5 / **-1.57**        | `pbf_2021_7_15_hot_to_cold_full_tank.csv` |
+
+

@@ -84,7 +84,7 @@ temp_max <- 35.0
 temp_min <- 10.0
 single_tank <- 76
 
-# # 1 tank (77/5), half water, cold to hot
+# # 1 tank (77/5), full water, cold to hot
 # file <- 'C:/Users/Scooter/Desktop/WU/Summer/2021_temp_Data/raw_data/pbf_2021_7_9_one_tank_cold_to_hot_full_tanks.csv'
 # file_prefix <- "full_one_c2h_"
 # plot_title <- "Heating Temperature Profile"
@@ -220,6 +220,55 @@ for (cur_tank in tank_nums){
     #cur_tank <- 73
     sub_data <- subset(new_data,tank==cur_tank)
     message(sprintf("Current tank: %d length: %d ",cur_tank,nrow(sub_data)))
+    
+    
+    # Process the data to get slope
+    top_bot_percent <- 0.15 # Set threshold for when to pay attention to change
+    
+    #Grab min / max
+    curMax = max(sub_data$mea_temp)
+    curMin = min(sub_data$mea_temp)
+    
+    #Calculate thresholds
+    max_thresh = ((curMax - curMin) * (1-top_bot_percent) ) + curMin
+    min_thresh = ((curMax - curMin) * top_bot_percent) + curMin
+    
+    
+    #Place holders
+    minDelta <-100
+    maxDelta <- 0
+    deltaTotal <- 0
+    deltaCount <-0
+    
+    #Check every line
+    for(row in 2:nrow(sub_data)){
+        #For each line, see if it falls 'in' the threshold
+        if(sub_data[row,]$mea_temp > min_thresh && sub_data[row,]$mea_temp < max_thresh){
+            if(sub_data[row,]$norm_time < sub_data[row-1,]$norm_time){
+                message(sprintf("Time Divergance: $f", row))
+            }
+            curDelta <- abs(sub_data[row,]$mea_temp - sub_data[row-1,]$mea_temp) #Calculate delta
+            
+            
+            if(curDelta < minDelta){
+                minDelta <- curDelta
+            }
+            if(curDelta > maxDelta){
+                maxDelta <- curDelta
+            }
+            deltaTotal <- deltaTotal + curDelta
+            deltaCount <- deltaCount + 1
+            
+        }
+    }
+    
+    message(sprintf("Current Tank Deltas: Min: %f, Max: %f, Avg: %f of %f",minDelta, maxDelta, (deltaTotal/deltaCount), deltaCount))
+    message(sprintf("Min thresh: %f, Max thresh: %f",min_thresh, max_thresh))
+    message(sprintf("Min temp: %f, Max temp: %f",curMin, curMax))
+    message(sprintf("Degrees/Hour:  %f/%f/%f", minDelta*6, maxDelta*6, (deltaTotal/deltaCount)*6 )) #This is based on 10 minute sample sizes (6 samples per hour)
+    
+    message( " ")
+        
 
     p_out <- ggplot( data=sub_data, aes(x=norm_time, y=mea_temp)) + 
     geom_point() +
