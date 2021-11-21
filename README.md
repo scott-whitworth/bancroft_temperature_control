@@ -9,7 +9,7 @@ This code pairs with a physical system developed for Betsy Bancroft's Ecology La
 | [System Overview](#System-Overview) | [System Diagrams and Photos](./supplementaryData/System_Photos/README.md) |
 | [System Set Up](#Set-Up-Considerations-and-Documentation) |  [Setup Readme](./systemSetup/README.md) |
 | [Naming Convention](#system-naming-information) |  |
-| [Bill of Materials](#bill-of-materials) | |
+| [Bill of Materials](#bill-of-material) | |
 | [Future Work](#future-work-notes) | |
 | [Licenses](#license-information-for-3rd-party-software) | |
 
