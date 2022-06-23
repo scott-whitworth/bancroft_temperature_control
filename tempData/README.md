@@ -9,3 +9,5 @@ All temperatures are in degrees C as floats. These tempData files would take the
 <day number+2>, <0:00 temp>, <0:30 temp>, <1:00 temp>, <1:30 temp>, ...
 
 ```
+
+Examples of this data can be found in `./supplementaryData/2018_Temperature_Profiles`
