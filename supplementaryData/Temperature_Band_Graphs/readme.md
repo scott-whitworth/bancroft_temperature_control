@@ -1,6 +1,9 @@
 # Temperature Variance by Temperature Band  
 Supplementary system performance data.
 
+![Mean, daily max, for all tanks](./Mean_daily_max_all_line_graph.png)
+Example data showing the separation between the Future and Historic treatments. All set-temps within a treatment were the same, so the span (the difference between the min and max temperatures) represents, for the hottest part of a day, the variance between treatments. 
+
 ## Overview
 A valuable insight into the system is how stable, or steady, the measurement-to-measurement variance in measured temp. Fluctuations in temperature from measurement to measurement may be from a number of different factors: if the water is low, the heater has much less thermal mass to change, so the variance can be pretty high. The higher the water, the more smoothed the heating profile is from measurement to measurement. Additionally the placement of the temperature probe in the tank has a large impact on the overall measured temperature profile (and thus the heater control as well).  
 

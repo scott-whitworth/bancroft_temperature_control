@@ -26,6 +26,8 @@ This code pairs with a physical system developed for Betsy Bancroft's Ecology La
  
 # System Overview
 
+![Four example temperature profiles, across different tanks. Triangles are Future, Circles are Historic ](./Example_four_tanks_1day_both_treats.png)
+
 This system is specifically designed to facilitate ecological climate change experiments. The core requirement of the system is to individually control and record the temperature for a collection of aquarium tanks. At the moment each tank can follow one of two temperature profiles. These profiles are made up of many days of temperature data, each in 30 minute segments. As the experiment progresses the system influences the heat added to each tank to approach the required set temperature.
 
 Each tank has a temperature probe and a aquarium heater. The system reads the temperature via the probe and applies heat using the aquarium heater. The collection of tanks are stored in a temperature controlled room set bellow the minimum temperature. The system uses a simple control algorithm comparing the current temperature to the desired temperature, if below: the heater turns on, otherwise: heater turns off.
